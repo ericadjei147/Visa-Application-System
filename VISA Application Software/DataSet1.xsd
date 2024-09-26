@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="DataSet1.xsd" xmlns:mstns="DataSet1.xsd" xmlns="DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="NotPublic" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="visaappConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="visaappConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.VISA_Application_Software.My.MySettings.GlobalReference.Default.visaappConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="conStr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conStr (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.VISA_Application_Software.My.MySettings.GlobalReference.Default.conStr" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reportTableAdapter" GeneratorDataComponentClassName="reportTableAdapter" Name="report" UserDataComponentName="reportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conStr (MySettings)" DbObjectName="visaapp.report" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TotalApplications, ApprovedApplications, RejectedApplications, PendingApplications, visatype
+FROM     report</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TotalApplications" DataSetColumn="TotalApplications" />
+              <Mapping SourceColumn="ApprovedApplications" DataSetColumn="ApprovedApplications" />
+              <Mapping SourceColumn="RejectedApplications" DataSetColumn="RejectedApplications" />
+              <Mapping SourceColumn="PendingApplications" DataSetColumn="PendingApplications" />
+              <Mapping SourceColumn="visatype" DataSetColumn="visatype" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="report" msprop:Generator_TableClassName="reportDataTable" msprop:Generator_TableVarName="tablereport" msprop:Generator_TablePropName="report" msprop:Generator_RowDeletingName="reportRowDeleting" msprop:Generator_RowChangingName="reportRowChanging" msprop:Generator_RowEvHandlerName="reportRowChangeEventHandler" msprop:Generator_RowDeletedName="reportRowDeleted" msprop:Generator_UserTableName="report" msprop:Generator_RowChangedName="reportRowChanged" msprop:Generator_RowEvArgName="reportRowChangeEvent" msprop:Generator_RowClassName="reportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalApplications" msprop:Generator_ColumnVarNameInTable="columnTotalApplications" msprop:Generator_ColumnPropNameInRow="TotalApplications" msprop:Generator_ColumnPropNameInTable="TotalApplicationsColumn" msprop:Generator_UserColumnName="TotalApplications" type="xs:long" />
+              <xs:element name="ApprovedApplications" msprop:Generator_ColumnVarNameInTable="columnApprovedApplications" msprop:Generator_ColumnPropNameInRow="ApprovedApplications" msprop:Generator_ColumnPropNameInTable="ApprovedApplicationsColumn" msprop:Generator_UserColumnName="ApprovedApplications" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RejectedApplications" msprop:Generator_ColumnVarNameInTable="columnRejectedApplications" msprop:Generator_ColumnPropNameInRow="RejectedApplications" msprop:Generator_ColumnPropNameInTable="RejectedApplicationsColumn" msprop:Generator_UserColumnName="RejectedApplications" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PendingApplications" msprop:Generator_ColumnVarNameInTable="columnPendingApplications" msprop:Generator_ColumnPropNameInRow="PendingApplications" msprop:Generator_ColumnPropNameInTable="PendingApplicationsColumn" msprop:Generator_UserColumnName="PendingApplications" type="xs:decimal" minOccurs="0" />
+              <xs:element name="visatype" msprop:Generator_ColumnVarNameInTable="columnvisatype" msprop:Generator_ColumnPropNameInRow="visatype" msprop:Generator_ColumnPropNameInTable="visatypeColumn" msprop:Generator_UserColumnName="visatype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
